@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .threelines {
+            width: 30px;
+            height: 30px;
+            background-color: rgb(196, 183, 183);
+            margin: 6px 0;
+            margin-left: 20px;
+        }
+
+        #listitems li {
+            list-style: none;
+            margin: 30px 0px;
+
+        }
+
+        #menuicon {
+            height: 40px;
+
+
+        }
+
+        #listitems li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            height: 100px;
+            overflow: auto;
+            font-weight: bold;
+        }
+
+        #listitems {
+            background-color: orange;
+            width: 150px;
+            height: 100vh;
+            overflow: auto;
+            margin-top: 5px;
+        }
+
+        #navbar #menuicon {
+            border-bottom: 2px solid rgb(92, 88, 88);
+            box-shadow: 0px 5px rgb(124, 122, 122);
+
+        }
+
+        #navbar #menuicon #title {
+            position: absolute;
+            left: 80px;
+            margin-top: -30px;
+        }
+
+        #body {
+            display: flex;
+            float: left;
+            list-style: none;
+            margin-top: -680px;
+            height: 70px;
+            margin-left: 150px;
+        }
+
+        #body li {
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        #body li button {
+            border: 2px solid rgb(131, 129, 129);
+            border-radius: 10px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background: none;
+        }
+
+        #body li button:hover {
+            background-color: antiquewhite;
+        }
+
+        #body li select:hover {
+            background-color: antiquewhite;
+        }
+
+        #body li select {
+            border: 2px solid rgb(131, 129, 129);
+            border-radius: 10px;
+            width: 100px;
+            height: 30px;
+            color: rgb(35, 36, 36);
+            font-weight: bold;
+            text-align: center;
+            margin-top: 18px;
+
+        }
+
+        #body li select option {
+            font-weight: bold;
+        }
+
+        #body li input {
+            border: 2px solid rgb(131, 129, 129);
+            border-radius: 10px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        table th,
+        tr {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 500px;
+        }
+
+        table tr td {
+            margin: 20px;
+        }
+
+        table {
+            width: auto;
+            position: absolute;
+            top: 100px;
+            margin-left: 170px;
+            height: 50px;
+            text-align: center;
+        }
+
+        table th {
+            border-style: groove;
+            box-shadow: 0px 2px rgb(116, 114, 114);
+        }
+
+        #form {
+            margin-left: 40%;
+            position: relative;
+            bottom: 600px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        #form input {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            height: 40px;
+            width: 400px;
+            font-weight: bold;
+
+        }
+
+        #submit {
+            background: none;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            border: 2px solid blue;
+        }
+
+        #gridid {
+            width: auto;
+            height: auto;
+            margin-left: 170px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            bottom: 600px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #gridbutton {
+            position: absolute;
+            top: 30px;
+            right: 5px;
+        }
+
+        #tablebutton {
+            position: absolute;
+            top: 30px;
+            right: 5px;
+        }
+
+        .mygriddiv {
+            display: inline-block;
+            vertical-align: middle;
+            width: 300px;
+            height: auto;
+            box-shadow: 5px 5px rgb(116, 113, 113);
+            font-weight: lighter;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        #detailspage {
+            margin-left: 200px;
+            position: absolute;
+            top: 100px;
+            border-style: groove;
+        }
+
+        #photo {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        #textcontent {
+            margin-left: 250px;
+            position: absolute;
+            top: 10px;
+            text-align: center;
+        }
+
+        #textcontent div {
+            margin: 20px;
+            font-weight: bold;
+            color: rgb(116, 112, 112);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        .btnclass {
+            color: rgb(78, 75, 75);
+        }
+
+        .btnclass:hover {
+            color: black;
+        }
+        #divselect{
+            position: relative;
+            top: 10px;
+            width: 150px;
+            
+        }
+        #divselect div{
+           position: relative;
+           height: 40px;
+           background-color: black;
+           color: white;
+        }
+        #divselect div p{
+            position: relative;
+           left: 50px;
+           top: -30px;
+           font-family: Arial, Helvetica, sans-serif;
+           cursor: pointer;
+           font-size: 15px; 
+           
+        }
+        #divselect div img{
+            position: relative;
+            top: 10px;
+            left: 10px;
+            margin-bottom: 5px;
+        }
+       #divselect div:hover{
+        border: 1px solid black;
+        background: blue;
+        color: white;
+        
+       }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+
+        <div id="menuicon">
+            <!--<div class="threelines" id="one" onclick="myfunc()" ></div>
+            <div class="threelines" id="two" oncli ck="myfunc()"></div>
+            <div class="threelines" id="three" onclick="myfunc()"></div>-->
+            <div class="threelines" style="background: none;"><button id="menubarbutton" onclick="myfunc()"
+                    style="background: none; border: none; position: relative; left: -20px; top: 2px; height: 30px; width: 30px;  "><img
+                        src="menu-regular-24.png" alt="" id="imgsrc" width="40px" height="40px"></button></div>
+            <h2 id="title" style="color: orange; ">Contacts</h3>
+                <input type="search" style="position: absolute; top: 10px; left: 40%; width: 400px; height: 30px;"
+                    placeholder="search">
+                <button
+                    style="position: absolute; top: 5px; right: 150px; font-weight: lighter; color: rgb(134, 130, 130); font-size: 40px; background: none; border: none;">+</button>
+                <select name="" id=""
+                    style="position: absolute; top: 15px; right: 50px;  border: none; border-left: 1px solid rgb(126, 123, 123); font-size: 20px;">
+                    <option value=""> dheeraj</option>
+                    <option value=""> Rohan</option>
+                </select>
+                <button style="position: absolute; top: 12px; right: 0; background: none; border: none;"><img
+                        src="settings-removebg-preview.png" width="30px" height="30px" alt=""></button>
+        </div>
+        <div id="listitems" style="width: 50px;">
+            <ul>
+                <li class="li"><a href="#" id="aone" style="display: none;  " class="atag"><i class='bx bxs-home bx-sm' id="iconone"></i>   Home</a></li>
+                <li class="li"><a href="#" id="atwo" style="display: none; " class="atag"><i class='bx bxs-message-square bx-sm' id="icontwo"></i>  About</a>
+                </li>
+                <li class="li"><a href="#" id="athree" style="display: none;" class="atag"><i class='bx bxs-contact bx-sm'  id="iconthree"></i>  Contact</a></li>
+                <li class="li"><a href="#" id="afour" style="display: none;" class="atag"> <i class='bx bxs-report bx-sm' id="iconfour"></i>   Report</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="body">
+        <li><button style="width: 150px; text-align: center; position: relative; top: -3px;" id="createcontact">Create contact</button></li>
+        <li><select name="group" id="group">
+                <option value="group">Group</option>
+            </select></li>
+        <li>
+            <div id="divselect" >
+                <div style="border: 1px solid rgb(131, 129, 129); border-radius: 10px; height: 28px; top: 7px; background-color: white; color: black;" id="divone">
+                    <img src="blue-removebg-preview.png" style="position: relative; top: 5px;"  width="20px" height="20px" alt="" >
+                    <p id="text" style="position: relative; top: -37px; ">Live</p>
+                </div>
+                <div style="position: relative; top: -1px; display: none;" id="divtwo">
+                    <img src="halfblue-removebg-preview.png" style="position: relative; left: 0px;" width="40px" height="20px" alt="">
+                    <p id="texttwo" >Live</p>
+                </div>
+                <div  style="position: relative; top: -5px; display: none;" id="divthree">
+                    <img src="green-removebg-preview.png" width="20px" height="20px" alt="">
+                    <p id="textthree">Active</p>
+                </div>
+                <div  style="position: relative; top: -5px; display: none;" id="divfour">
+                    <img src="blue-removebg-preview.png" width="20px" height="20px" alt="">
+                    <p id="textfour">Archive</p>
+                </div>
+                <div  style="position: relative; top: -5px; display: none;" id="divfive">
+                    <img src="yellow-removebg-preview.png" width="20px" height="20px" alt="">
+                    <p id="textfive">Draft</p>
+                </div>
+                <div  style="position: relative; top: -5px; display: none;" id="divsix">
+                    <img src="circle-solid-24.png" width="20px" height="20px" alt="">
+                    <p id="textsix">Deleted</p>
+                </div>
+        
+              </div>
+        </li>
+        <li><button id="view" style="position: relative; top: -3px;">View contact</button></li>
+        <li><button id="navdatebtn" onclick="navdatebtn()" style="position: relative; top: -3px;">Date</button></li>
+        <li><input type="search" placeholder="keyword" class="bx bx-search-alt-2"></li>
+    </div>
+    <div id="bodytable">
+        <table style="display: none;" id="table">
+            <tr id="head">
+                <th>S.NO</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Organization</th>
+                <th>City</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Group</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Update</th>
+            </tr>
+            <!--<tr id="bodytr" class="bodytrclass" >
+                    <td>serial number</td>
+                    <td >Dheeraj</td>
+                    <td>Team member</td>
+                    <td>Digital ocean</td>
+                    <td>Hyderbad</td>
+                    <td>9999</td>
+                    <td>dheeraj@gmail.com</td>
+                    <td>None</td>
+                    <td>tody</td>
+                    <td>active</td>
+                </tr>-->
+        </table>
+        <div id="form" style="display: none;">
+            <form action="">
+                <label for="">Name</label><br>
+                <input type="text" id="name"><br>
+                <label for="">Title</label><br>
+                <input type="text" id="titletwo"><br>
+                <label for="">Organization</label><br>
+                <input type="text" id="organization"><br>
+                <label for="">City</label><br>
+                <input type="text" id="city"><br>
+                <label for="">Mobile</label><br>
+                <input type="number" id="number"><br>
+                <label for="">Email</label><br>
+                <input type="email" id="email"><br>
+                <label for="">Group</label><br>
+                <input type="text" id="groupone"><br>
+                <label for="">Date</label><br>
+                <input type="date" id="dateone"><br>
+                <label for="">Status</label><br>
+                <input type="text" id="status" placeholder="ACTIVE or NOT ACTIVE"><br>
+                <input type="button" name="submit" value="submit" id="submit"
+                    style="width: 100px; text-align: center; width: 80px; height: 40px;">
+            </form>
+        </div>
+        <div id="gridbutton">
+            <button id="gridbutton" onclick="switchbutton()" style="background: none; border: none;"><img
+                    src="girdicon.png" width="30px" height="30px" style="border: none;" alt=""></button>
+            <button id="tablebutton" onclick="switchbutton()"
+                style="visibility: hidden; background: none; border: none;"><img src="listbutton-removebg-preview.png"
+                    width="30px" height="30px" alt=""></button>
+                    <br>
+            <select name="" id="sort" style="position: relative; right: 70px; top: 15px; height: 30px; ">
+                <option value="">Sort by</option>
+                <option value="">Name</option>
+                <option value="">Date</option>
+            </select>
+        </div>
+        <div id="gridid">
+
+        </div>
+        <div id="detailspage" style="width: 1000px; height:500px; ">
+            <div id="photo" style="width: 200px; height: 200px; border: groove;"></div>
+            <div id="textcontent" style=" width: 500px; height: auto;">
+                <div id="detailsname">
+
+                </div>
+                <div id="detailstitle">
+                    <label for="">Title</label>
+                </div>
+                <div id="detailsorg">
+                    <label for="">Organization</label>
+                </div>
+                <div id="detailscity">
+                    <label for="">City</label>
+                </div>
+                <div id="detailsgroup">
+                    <label for="">Group</label>
+                </div>
+                <div id="detailsmobile">
+                    <label for="">Mobile</label>
+                </div>
+                <div id="detailsemail">
+                    <label for="">Email</label>
+                </div>
+                <br>
+                <button id="X" style="position: absolute; right: -240px; top: -10px;" onclick="xfunc()">X</button>
+                <div style=" position: absolute; right: -220px; top: -30px;" id="threedotsdiv">
+                    <button id="threedots" style="background: none;"><i class='bx bx-dots-vertical-rounded' ></i></button>
+                    <br>
+                    <br>
+                    <li style="list-style: none; display: none; " id="listeditbutton" > <button id="detailsedit" style="background: none; ">Edit</button></li>
+                </div>
+            </div>
+        </div>
+        <div id="navdatebtntwo"
+            style="display: none; width: 200px; height: 100px; border: 1px solid black; position: absolute; top: 92px; left: 650px; background-color: white;">
+            <p id="datefilter" style="font-weight: bold; font-size: 20px; margin-left: 10px;">Date filter</p>
+            <!--<input type="date" placeholder="select a date" style="font-size: 15px; width: 90px;">
+    <input type="date" placeholder="select a date" style="font-size: 15px; width: 90px; position: absolute; right: 0;" >-->
+            <p style="position: relative; top: -10px; left: 10px; font-family: Arial, Helvetica, sans-serif;"><input
+                    type="text" placeholder="start date 📅" style="width: 70px; font-size: 15px; height: 20px;"
+                    onfocus="(this.type='date')">-<input type="text" placeholder="end date 📅"
+                    onfocus="(this.type='date')" style="width: 90px; font-size: 15px; height: 20px;"></p>
+            <button class="btnclass"
+                style="position: absolute; bottom: 0; left: 5px; background: none; border-color: rgb(145, 143, 143); border-style: groove; width: 60px; font-size: 10px; font-weight: bold;  ">Done</button>
+            <button class="btnclass"
+                style="position: absolute; bottom: 0; left: 35%; background: none; border-color: rgb(145, 143, 143); border-style: groove; width: 60px; font-size: 10px; font-weight: bold;  ">Clear</button>
+            <button class="btnclass" id="canceldate"
+                style="position: absolute; bottom: 0; right: 5px; background: none; border-color: rgb(145, 143, 143); border-style: groove; width: 60px; font-size: 10px; font-weight: bold; ">Cancel</button>
+        </div>
+        <footer style="height: 30px; background-color: rgb(156, 177, 37); ">
+
+        </footer>
+    </div>
+    <center>
+        <div id="check">
+            <label for="">check this box to view about section</label>
+            <input type="checkbox" id="checkbox">
+        </div>
+    </center>
+    <script src="index.js"></script>
+    <script>
+        window.onload = onloadfunc()
+        function onloadfunc() {
+            document.getElementById('table').style.display = ""
+            document.getElementById('detailspage').style.display = "none"
+        }
+        var one = document.getElementById('one')
+        var two = document.getElementById('two')
+        var three = document.getElementById('three')
+        var menubutton = document.getElementById('menuicon')
+
+        document.getElementById('canceldate').addEventListener('click',function(e){
+            document.getElementById('navdatebtntwo').style.display="none"
+        })
+        function myfunc() {
+            // menubutton.addEventListener('click',function(e){
+            if (document.getElementById('listitems').style.width =="50px") {
+                document.getElementById('listitems').style.width = "150px"
+                //document.getElementById('listitems').style.transition = "width 0.5s"
+                document.getElementById('aone').style.display = ""
+                document.getElementById('atwo').style.display = ""
+                document.getElementById('athree').style.display = ""
+                document.getElementById('afour').style.display = ""
+            }
+            else {
+                document.getElementById('listitems').style.width = "50px"
+                //document.getElementById('listitems').style.transition = "1s"
+                document.getElementById('aone').style.display = "none"
+                document.getElementById('atwo').style.display = "none"
+                document.getElementById('athree').style.display = "none"
+                document.getElementById('afour').style.display = "none"
+                document.getElementById('iconone').style.display=""
+                document.getElementById('icontwo').style.display=""
+                document.getElementById('iconthree').style.display=""
+                document.getElementById('iconfour').style.display=""
+            }
+            // })
+        }
+        function navdatebtn() {
+            if (document.getElementById('navdatebtntwo').style.display == "none") {
+                document.getElementById('navdatebtntwo').style.display = ""
+            }
+            else {
+                document.getElementById('navdatebtntwo').style.display = "none"
+            }
+        }
+        document.getElementById('view').addEventListener('click', function (e) {
+            document.getElementById('table').style.display = ""
+            document.getElementById('form').style.display = "none"
+            document.getElementById('gridid').style.display = "none"
+            document.getElementById('detailspage').style.display = "none"
+            document.getElementById('gridbutton').style.display = ""
+        })
+        var listofmenu = document.getElementsByClassName('atag')
+        var checkbox = document.getElementById('checkbox')
+        var arr = []
+        var sentence = ""
+
+        for (var i = 0; i < listofmenu.length; i++) {
+                sentence = listofmenu[i].innerHTML
+                arr.push(sentence)
+                console.log(sentence)
+                console.log(arr)
+        }
+        checkbox.addEventListener('click',function(e){
+            if(checkbox.checked==true){
+                document.getElementById('atwo').style.display=""
+            }
+            else{
+                document.getElementById('atwo').style.display="none"
+            }
+        })
+      
+        var textone = document.getElementById('text')
+        document.getElementById('divtwo').addEventListener('click',function(e){
+        textone.innerHTML= document.getElementById('texttwo').innerHTML
+        })
+        document.getElementById('divthree').addEventListener('click',function(e){
+        textone.innerHTML= document.getElementById('textthree').innerHTML
+        })
+        document.getElementById('divfour').addEventListener('click',function(e){
+        textone.innerHTML= document.getElementById('textfour').innerHTML
+        })
+        document.getElementById('divfive').addEventListener('click',function(e){
+        textone.innerHTML= document.getElementById('textfive').innerHTML
+        })
+        document.getElementById('divsix').addEventListener('click',function(e){
+        textone.innerHTML= document.getElementById('textsix').innerHTML
+        })
+        document.getElementById('divone').addEventListener('click',function(e){
+            if(document.getElementById('divtwo').style.display=="none"){
+                document.getElementById('divtwo').style.display=""
+            }
+            else{
+                document.getElementById('divtwo').style.display="none"
+            }
+            if(document.getElementById('divthree').style.display=="none"){
+                document.getElementById('divthree').style.display=""
+            }
+            else{
+                document.getElementById('divthree').style.display="none"
+            }
+            if(document.getElementById('divfour').style.display=="none"){
+                document.getElementById('divfour').style.display=""
+            }
+            else{
+                document.getElementById('divfour').style.display="none"
+            }
+            if(document.getElementById('divfive').style.display=="none"){
+                document.getElementById('divfive').style.display=""
+            }
+            else{
+                document.getElementById('divfive').style.display="none"
+            }
+            if(document.getElementById('divsix').style.display=="none"){
+                document.getElementById('divsix').style.display=""
+            }
+            else{
+                document.getElementById('divsix').style.display="none"
+            }
+            if(document.getElementById('bodytable').style.display==""){
+                document.getElementById('bodytable').style.display="none"
+            }
+            else{
+                document.getElementById('bodytable').style.display=""
+            }
+        })
+
+        document.getElementById('threedots').addEventListener('click',function(e){
+            e.preventDefault();
+            if(document.getElementById('listeditbutton').style.display=="none"){
+                document.getElementById('listeditbutton').style.display=""
+                document.getElementById('threedotsdiv').style.border="1px solid black"
+                document.getElementById('threedotsdiv').style.width="100px"
+                document.getElementById('threedotsdiv').style.height="100px"
+            }
+            else{
+                document.getElementById('listeditbutton').style.display="none"
+                document.getElementById('threedotsdiv').style.border="none"
+                document.getElementById('threedotsdiv').style.border="none"
+            }
+        })
+      </script>
+    </script>
+</body>
+
+</html>
